@@ -3,13 +3,7 @@ import random
 from game_data import data
 from replit import clear
 from art import logo,vs  
-#compare with original answer using functions
 
-def compare(user_guess,answer):
-  if user_guess == answer:
-    return 1
-  else:
-    return 0
 
 def format_data(person):
   person_name = person["name"]
@@ -24,6 +18,7 @@ def check_answer(user_guess, value_a, value_b):
     return user_guess == "a"
   else:
     return user_guess == "b"
+
 def game():
   print(logo)
   person_a = random.choice(data)
