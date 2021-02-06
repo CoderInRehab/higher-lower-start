@@ -21,13 +21,13 @@ def check_answer(user_guess, value_a, value_b):
 
 def game():
   print(logo)
-  person_a = random.choice(data)
+  person_b = random.choice(data)
 
   is_game_over = False
   score = 0
 
   while not is_game_over:
-   
+    person_a = person_b
     person_b = random.choice(data)
     while person_a == person_b:
       person_b = random.choice(data)
@@ -51,7 +51,6 @@ def game():
     if is_correct:
       score += 1
       print(f"You're right! Current score: {score}.")
-      person_a = person_b
       
     else:
       print(f"Sorry that's wrong. Final score: {score}")
